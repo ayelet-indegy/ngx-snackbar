@@ -11,7 +11,7 @@ import {SnackbarService} from '../service/snackbar.service';
               <div class="snack-text" [innerHtml]="snackbar.msg | safeHtml">
 
               </div>
-              <div *ngIf="snackbar.action.text" class="snack-action" (click)="snackbar.action.onClick()"
+              <div *ngIf="snackbar.action && snackbar.action.text" class="snack-action" (click)="snackbar.action.onClick()"
                    [ngStyle]="{color: snackbar.action.color || accent}">
                   {{snackbar.action.text}}
               </div>
